@@ -14,3 +14,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+list_1 = [1, "col", 4.5, "frog", None, False]
+for i in list_1:
+    print(type(i))
