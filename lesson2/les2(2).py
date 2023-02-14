@@ -12,9 +12,10 @@
 """
 
 a = int(input("Ведите целое положительное число: "))
+max1 = -1
 while a > 10:
-    max1 = a % 10
-    if a % 10 > max1:
-        max1 = max1
-else:
-    print(max1)
+    k = a % 10
+    a //= 10
+    if k > max1:
+        max1 = k
+print("Самая большая цифра в числе", max1)
