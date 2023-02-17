@@ -18,5 +18,18 @@
 
 lst = [7, 5, 3, 3, 2]
 a = int(input("Введите вашу оценку: "))
-
-print(*lst)
+c = lst.count(a)
+for i in lst:
+    if c > 0:
+        i = lst.index(a)
+        lst.insert(i + c, a)
+        break
+    elif a > i:
+        k = lst.index(i)
+        lst.insert(k, a)
+        break
+    else:
+        if a < i:
+            lst.append(a)
+            break
+print(lst)
