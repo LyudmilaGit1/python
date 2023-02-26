@@ -10,9 +10,7 @@
 def summ(num, b=1, sum=0):
     if num == 0:
         return float(sum)
-    if num > 0:
-        sum = sum + b
-    return summ(num - 1, b / -2, sum)
+    return summ(num - 1, b / -2, sum + b)
 
 a = int(input('Введите ваше число:'))
 print(f'Колличество элементов - {a}, их сумма: {summ(a)}')
