@@ -9,11 +9,11 @@
 
 def summ(num, b=1, sum=0):
     if num == 0:
-        return sum
+        return float(sum)
     if num > 0:
         sum = sum + b
     return summ(num - 1, b / -2, sum)
 
-a = float(input('Введите ваше число:'))
+a = int(input('Введите ваше число:'))
 print(f'Колличество элементов - {a}, их сумма: {summ(a)}')
 
