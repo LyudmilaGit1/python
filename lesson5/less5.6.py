@@ -13,13 +13,14 @@ n = random.randint(0, 100)
 def game(num, i):
     a = int(input("Угадайте число:"))
     if a == n:
+        print(f'Вы выиграли! Загаданное число {n}')
         return
-        print('You win!')
     if a < n:
         print('загаданное число больше')
-    else:
+    if a > n:
         print('загаданное число меньше')
     if i == 10:
         print(f'Вы проиграли. Загаданное число {n}')
+        return
     return game(num, i + 1)
 game(n, 1)
